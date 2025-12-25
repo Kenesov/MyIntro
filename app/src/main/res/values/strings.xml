@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="title">Cardaprica</string>
+    <string name="subtitle">Donec facilisis tortor ut augue lacinia, at viverra est semper.</string>
+    <string name="desc">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum.</string>
+    <string name="title_chatbot">Smart Chatbot</string>
+    <string name="desc_chatbot">Practice reflexes heard super fast</string>
+    <string name="title_overview">Overview Study</string>
+    <string name="desc_overview">of all skills: Vocabulary, Grammar, Speaking…</string>
+    <string name="title_online_learning">Online Learning 1-1</string>
+    <string name="desc_online_learning">via video call with the teacher all around the world</string>
+    <string name="onboarding_title_1">‘Explara’ adapts to who YOU are and knows what YOU like.</string>
+    <string name="onboarding_title_2">Your Passion is You. Explore it.</string>
+    <string name="onboarding_title_3">Explore events crafted to your taste.</string>
+    <string name="btn_sign_in">Sign In</string>
+    <string name="link_sign_up">Sign up now ></string>
+    <string name="link_skip_events">Skip to Events ></string>
+    <string name="onboarding_title_11">Search for favorite food near you</string>
+    <string name="onboarding_desc_11">Discover the foods from over 3250 restaurants.</string>
+    <string name="onboarding_title_21">Fast delivery to your place</string>
+    <string name="onboarding_desc_21">Fast delivery to your home, office and wherever you are.</string>
+    <string name="onboarding_title_31">Tracking shipper on the map</string>
+    <string name="onboarding_desc_31">Discover the foods from over 3250 restaurants.</string>
+    <string name="button_sign_up">Sign Up</string>
+    <string name="button_sign_in">Sign In</string>
+    <string name="onboarding_title_order">Order Your Food</string>
+    <string name="onboarding_desc_order">Now you can order food any time right from your mobile.</string>
+    <string name="onboarding_title_safe">Cooking Safe Food</string>
+    <string name="onboarding_desc_safe">We are maintain safty and We keep clean while making food.</string>
+    <string name="onboarding_title_quick">Quick Delivery</string>
+    <string name="onboarding_desc_quick">Orders your favorite meals will be immediately deliver</string>
+</resources>

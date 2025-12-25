@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8A63B3"
+    android:gravity="center"
+    android:id="@+id/bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#7C2433"
+        android:text="Cardaprica"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:paddingHorizontal="20dp"
+        android:text="Done facilisis tortor ut ague lacinia, at viverra est semper." />
+
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:src="@drawable/task1_2" />
+
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingHorizontal="20dp"
+        android:textColor="@color/white"
+        android:text="Cras quis nulla commodo, aliquam lectus sed, blandit augue.Cras quis nulla commodo, aliquam lectus sed, blandit augue." />
+
+</LinearLayout>

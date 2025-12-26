@@ -20,7 +20,7 @@ class Task3Activity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        binding.viewPager.adapter = PagerAdapter(supportFragmentManager, lifecycle)
+        binding.viewPager.adapter = Pager3Adapter(supportFragmentManager, lifecycle)
         binding.dotsIndicator.attachTo(binding.viewPager)
 
     }

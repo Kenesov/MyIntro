@@ -6,9 +6,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.viewpager2.widget.ViewPager2
 import uz.gita.myapplication.R
 import uz.gita.myapplication.databinding.ActivityTask1Binding
-import uz.gita.myapplication.task1.PagerAdapter
 
 class Task1Activity : AppCompatActivity() {
 
@@ -25,26 +25,42 @@ class Task1Activity : AppCompatActivity() {
             insets
         }
 
-        binding.viewPager.adapter = PagerAdapter(supportFragmentManager, lifecycle)
+        binding.viewPager.adapter = Pager1Adapter(supportFragmentManager, lifecycle)
         binding.dotsIndicator.attachTo(binding.viewPager)
+        binding.viewPager.registerOnPageChangeCallback(
+            object : ViewPager2.OnPageChangeCallback() {
+                override fun onPageSelected(position: Int) {
+                    updateButtons()
+                }
+            }
+        )
+
 
         binding.prev.isEnabled = false
         binding.prev.imageTintList = ColorStateList.valueOf(resources.getColor(R.color.disabled))
+        updateButtons()
+
         binding.prev.setOnClickListener {
-            if (binding.viewPager.currentItem > 0) {
-                binding.viewPager.currentItem -= 1
-            }else{
-                binding.prev.imageTintList = ColorStateList.valueOf(resources.getColor(R.color.disabled))
-                binding.prev.isEnabled = false
-            }
+            binding.viewPager.currentItem -= 1
         }
 
         binding.next.setOnClickListener {
-            if (binding.viewPager.currentItem < 2) {
-                binding.viewPager.currentItem += 1
-                binding.prev.isEnabled = true
-                binding.prev.imageTintList = ColorStateList.valueOf(resources.getColor(R.color.enabled))
-            }
+            binding.viewPager.currentItem += 1
         }
+
+    }
+    private fun updateButtons(){
+        val isFirst = binding.viewPager.currentItem == 0
+        val isLast = binding.viewPager.currentItem == 2
+
+        binding.prev.isEnabled = !isFirst
+        binding.prev.imageTintList = ColorStateList.valueOf(
+            resources.getColor(if (isFirst) R.color.disabled else R.color.enabled)
+        )
+
+        binding.next.isEnabled = !isLast
+        binding.next.imageTintList = ColorStateList.valueOf(
+            resources.getColor(if (isLast) R.color.disabled else R.color.enabled)
+        )
     }
 }

@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:foreground="#98ff0817"
         android:scaleType="centerCrop"
-        android:src="@drawable/party" />
+        android:src="@drawable/task3_img" />
 
     <ImageView
         android:id="@+id/img"

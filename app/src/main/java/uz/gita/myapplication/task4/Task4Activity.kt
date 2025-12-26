@@ -27,11 +27,12 @@ class Task4Activity : AppCompatActivity() {
             insets
         }
 
-        binding.viewPager.adapter = PagerAdapter(supportFragmentManager, lifecycle)
+        binding.viewPager.adapter = Pager4Adapter(supportFragmentManager, lifecycle)
         binding.dotsIndicator.attachTo(binding.viewPager)
 
         binding.tvSkip.setOnClickListener {
-            Toast.makeText(this, "skip clicked", Toast.LENGTH_SHORT).show()
+            val lastIndex = binding.viewPager.adapter!!.itemCount - 1
+            binding.viewPager.currentItem = lastIndex
         }
 
         binding.tvNext.setOnClickListener {

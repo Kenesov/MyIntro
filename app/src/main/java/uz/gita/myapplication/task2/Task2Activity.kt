@@ -23,7 +23,7 @@ class Task2Activity : AppCompatActivity() {
             insets
         }
 
-        binding.viewPager.adapter = PagerAdapter(supportFragmentManager, lifecycle)
+        binding.viewPager.adapter = Pager2Adapter(supportFragmentManager, lifecycle)
         binding.dotsIndicator.attachTo(binding.viewPager)
 
     }
